@@ -11,7 +11,7 @@ const PlayerList = () => {
   // Function to fetch players data
   const fetchPlayers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/players");
+      const response = await axios.get("https://young-stars-frontend.vercel.app/api/players");
       setPlayers(response.data);
     } catch (error) {
       console.error("Error fetching players:", error);
@@ -41,7 +41,7 @@ const PlayerList = () => {
   // Handle deleting a player
   const handleDelete = async (playerId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/players/${playerId}`);
+      await axios.delete(`https://young-stars-frontend.vercel.app/api/players/${playerId}`);
       fetchPlayers(); // Refresh players list after deletion
       console.log("Player deleted successfully");
     } catch (error) {

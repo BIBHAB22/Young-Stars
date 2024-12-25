@@ -30,7 +30,7 @@ const PlayerForm = ({ addPlayer, editIndex, playerToEdit = {} }) => {
 
     if (editIndex !== null) {
       // Save updated player when editing
-        const response = await axios.put(`http://localhost:5000/api/players/${player.id}`, player);
+        const response = await axios.put(`https://young-stars-frontend.vercel.app/api/players/${player.id}`, player);
         console.log(response);
     
     } else {

@@ -49,7 +49,7 @@ const App = () => {
 
   const addPlayer = async (player) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/players", player);
+      const response = await axios.post("https://young-stars-frontend.vercel.app/api/players", player);
       setPlayers([...players, response.data]); // Add player to local state after successful API call
     } catch (error) {
       console.error("Error adding player", error);
