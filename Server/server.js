@@ -9,7 +9,7 @@ const port = 5000;
 // Enable CORS for all routes
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow only requests from localhost:3000
+    origin: "https://young-stars-frontend.vercel.app",
   })
 );
 
